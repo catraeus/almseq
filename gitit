@@ -1,0 +1,7 @@
+git add .cproject
+git add .gitignore
+git add .project
+git add .settings/
+git add gitit
+git add -f src/_main.cpp
+
