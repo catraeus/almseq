@@ -2,15 +2,15 @@
 // $Id: A $
 
 //=================================================================================================
-// Original File Name : _main.cpp
-// Original Author    : catraeus
+// Original File Name : CfgVersion.hpp
+// Original Author    : duncang
 // Creation Date      : Apr 17, 2022
 // Copyright          : Copyright © 2022 by Catraeus and Duncan Gray
 //
+//=================================================================================================
+//
 // Description        :
-/*
-   The one and only main()
-*/
+//    Contains the constants that tell everybody what this thing is.
 //
 //=================================================================================================
 /*
@@ -29,35 +29,18 @@ You should have received a copy of the GNU Lesser General Public License along w
 */
 //=================================================================================================
 
-#include <stdio.h>
-#include "AlsaMidi.hpp"
+#ifndef __CFG_VERSION_HPP_
+#define __CFG_VERSION_HPP_
 
-int main() {
-  int a;
+#define SVN_MARK 606
+#define VER_MAIN      0
+#define VER_POINT     1
+#define APP_NAME     "almseq"
+#define APP_ID_NM    "almseq"
+#define APP_DESC     "Alsa Midi Stream Thing"
+#define STR_CPYR     "Copyright © 2020 Catraeus and Duncan Gray"
+#define STR_AUTH     "Catraeus and Duncan Gray"
+#define STR_URL      "http://www.catraeus.com"
+#define STR_URL_LBL  "www.catraeus.com"
 
-         AlsaMidi   *theMidi;
-         snd_seq_t  *seq_handle;
-         int         npfd;
-  struct pollfd     *pfd;
-
-  theMidi = new AlsaMidi;
-
-  a = 57;
-  fprintf(stdout, "Gotcha %d!\n", a); fflush(stdout);
-
-
-
-  seq_handle = theMidi->OpenSeq();
-  npfd = snd_seq_poll_descriptors_count(seq_handle, POLLIN);
-  pfd = (struct pollfd *)alloca(npfd * sizeof(struct pollfd));
-  snd_seq_poll_descriptors(seq_handle, pfd, npfd, POLLIN);
-  while (1) {
-    if (poll(pfd, npfd, 100000) > 0) {
-      theMidi->MidiAction(seq_handle);
-    }
-  }
-
-
-  delete theMidi;
-  return 0;
-}
+#endif

@@ -1,7 +1,8 @@
 git add .cproject
-git add .gitignore
-git add .project
-git add .settings/
 git add gitit
-git add -f src/_main.cpp
+git add src/_main.cpp
+git add -f doc/MIDI_by_ALSA.ods
+git add -f src/AlsaMidi.cpp
+git add -f src/AlsaMidi.hpp
+git add -f src/Cfg/CfgVersion.hpp
 

@@ -2,14 +2,14 @@
 // $Id: A $
 
 //=================================================================================================
-// Original File Name : _main.cpp
+// Original File Name : AlsaMidi.hpp
 // Original Author    : catraeus
 // Creation Date      : Apr 17, 2022
 // Copyright          : Copyright © 2022 by Catraeus and Duncan Gray
 //
 // Description        :
 /*
-   The one and only main()
+   The class wrapper of Alsa MIDI Api stuff
 */
 //
 //=================================================================================================
@@ -29,35 +29,18 @@ You should have received a copy of the GNU Lesser General Public License along w
 */
 //=================================================================================================
 
-#include <stdio.h>
-#include "AlsaMidi.hpp"
+#ifndef __ALSA_MIDI_HPP_
+#define __ALSA_MIDI_HPP_
+#include <alsa/asoundlib.h>
 
-int main() {
-  int a;
+class AlsaMidi {
+  public:
+	               AlsaMidi   (void);
+	  virtual     ~AlsaMidi   (void);
+    snd_seq_t   *OpenSeq    (void);
+    void         MidiAction (snd_seq_t *seq_handle);
+	private:
 
-         AlsaMidi   *theMidi;
-         snd_seq_t  *seq_handle;
-         int         npfd;
-  struct pollfd     *pfd;
+};
 
-  theMidi = new AlsaMidi;
-
-  a = 57;
-  fprintf(stdout, "Gotcha %d!\n", a); fflush(stdout);
-
-
-
-  seq_handle = theMidi->OpenSeq();
-  npfd = snd_seq_poll_descriptors_count(seq_handle, POLLIN);
-  pfd = (struct pollfd *)alloca(npfd * sizeof(struct pollfd));
-  snd_seq_poll_descriptors(seq_handle, pfd, npfd, POLLIN);
-  while (1) {
-    if (poll(pfd, npfd, 100000) > 0) {
-      theMidi->MidiAction(seq_handle);
-    }
-  }
-
-
-  delete theMidi;
-  return 0;
-}
+#endif
