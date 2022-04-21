@@ -29,17 +29,47 @@ You should have received a copy of the GNU Lesser General Public License along w
 */
 //=================================================================================================
 
+#include <gtkmm.h>
 #include <stdio.h>
+#include <string.h>
+
+
+
+
+#include "Cfg/CfgEnv.hpp"
+#include "Cfg/CfgStrings.hpp"
+#include "Cfg/CfgParticles.hpp"
+
+
 #include "AlsaMidi.hpp"
 
-int main() {
-  int a;
+class MainConts { // total BS to shut up the warning about setting but not using.
+  public:
+
+
+    CfgEnv         *ce;
+    CfgStrings     *cs;
+    Glib::ustring  *ss;
+    CfgParticles   *cp;
+};
+
+//=================================================================================================
+int main(int i_argc, char *i_argv[], char *i_envp[]) {
+         MainConts      m;
+         int            dd_argc;
+         int a;
 
          AlsaMidi   *theMidi;
          snd_seq_t  *seq_handle;
          int         npfd;
   struct pollfd     *pfd;
 
+  m.ce       =     CfgEnv             :: GetInstance  ( i_argc, i_argv, i_envp   );  // Dangerous Singleton  Be very glad it is done here in main before anything else.
+  m.cs       =     CfgStrings         :: GetInstance  ( "English", m.ce->buildNo );  // Dangerous Singleton  Be very glad it is done here in main before anything else.
+  m.ss       = new Glib               :: ustring      ( m.ce->appId              );
+  dd_argc    = 1;
+  auto app   =     Gtk::Application   :: create       ( dd_argc, i_argv, *(m.ss), Gio::APPLICATION_FLAGS_NONE);
+  m.cp       =     CfgParticles       :: GetInstance  (                          );  // CfgParticles has GdkPixbufs in it so it has to go after app is created.
   theMidi = new AlsaMidi;
 
   a = 57;
