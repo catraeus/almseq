@@ -31,9 +31,6 @@ You should have received a copy of the GNU Lesser General Public License along w
 #include <stdio.h>
 #include <string.h>
 
-
-
-
 #include "Cfg/CfgEnv.hpp"
 #include "Cfg/CfgStrings.hpp"
 #include "Cfg/CfgParticles.hpp"
