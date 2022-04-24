@@ -50,7 +50,7 @@
 									<listOptionValue builtIn="false" value="/usr/include/gdk-pixbuf-2.0"/>
 									<listOptionValue builtIn="false" value="/usr/include/gio-unix-2.0"/>
 									<listOptionValue builtIn="false" value="/usr/include/sigc++-2.0"/>
-									<listOptionValue builtIn="false" value="/way/dev/SW/libs"/>
+									<listOptionValue builtIn="false" value="/way/dev/SW/hosted/github/libs"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1865740179" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -63,6 +63,16 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.181072101" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.libs.702067959" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
 									<listOptionValue builtIn="false" value="asound"/>
+									<listOptionValue builtIn="false" value="gtkmm-3.0"/>
+									<listOptionValue builtIn="false" value="gtk-3"/>
+									<listOptionValue builtIn="false" value="gdkmm-3.0"/>
+									<listOptionValue builtIn="false" value="atkmm-1.6"/>
+									<listOptionValue builtIn="false" value="glibmm-2.4"/>
+									<listOptionValue builtIn="false" value="cairomm-1.0"/>
+									<listOptionValue builtIn="false" value="pangomm-1.4"/>
+									<listOptionValue builtIn="false" value="sigc-2.0"/>
+									<listOptionValue builtIn="false" value="gsl"/>
+									<listOptionValue builtIn="false" value="gslcblas"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.paths.1077456385" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
 									<listOptionValue builtIn="false" value="/usr/lib"/>
@@ -78,18 +88,10 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<folderInfo id="cdt.managedbuild.config.gnu.exe.debug.2127869092.1545440234" name="/" resourcePath="src/libs/caes/deprecate">
-						<toolChain id="cdt.managedbuild.toolchain.gnu.exe.debug.783050662" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.exe.debug" unusedChildren="">
-							<tool id="cdt.managedbuild.tool.gnu.archiver.base.929155915" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base.679486895"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1403672318" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1585629599"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.757417536" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1074792589"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.520107737" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug.811789205"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.301112382" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.181072101"/>
-							<tool id="cdt.managedbuild.tool.gnu.assembler.exe.debug.1621862499" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.debug.759291195"/>
-						</toolChain>
-					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.debug.2127869092.1568843205" name="LICENSE" rcbsApplicability="disable" resourcePath="src/libs/libs_github/caes/LICENSE" toolsToInvoke=""/>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.debug.2127869092.1549205949" name="README.md" rcbsApplicability="disable" resourcePath="src/libs/libs_github/caes/README.md" toolsToInvoke=""/>
 					<sourceEntries>
-						<entry excluding="libs/caes/deprecate|libs/caes/AudioFile|libs/icon|libs/pcg|libs/comms|env" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry excluding="libs/libs_github/caes/README.md|libs/libs_github/caes/LICENSE|libs/caes/deprecate|libs/caes/AudioFile|libs/icon|libs/pcg|libs/comms|env" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -144,7 +146,7 @@
 									<listOptionValue builtIn="false" value="/usr/include/gdk-pixbuf-2.0"/>
 									<listOptionValue builtIn="false" value="/usr/include/gio-unix-2.0"/>
 									<listOptionValue builtIn="false" value="/usr/include/sigc++-2.0"/>
-									<listOptionValue builtIn="false" value="/way/dev/SW/libs"/>
+									<listOptionValue builtIn="false" value="/way/dev/SW/hosted/github/libs"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2008366609" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -155,6 +157,19 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.release.1661641283" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.release"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.1788006817" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.libs.1920988371" superClass="gnu.cpp.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="asound"/>
+									<listOptionValue builtIn="false" value="gtkmm-3.0"/>
+									<listOptionValue builtIn="false" value="gtk-3"/>
+									<listOptionValue builtIn="false" value="gdkmm-3.0"/>
+									<listOptionValue builtIn="false" value="atkmm-1.6"/>
+									<listOptionValue builtIn="false" value="glibmm-2.4"/>
+									<listOptionValue builtIn="false" value="cairomm-1.0"/>
+									<listOptionValue builtIn="false" value="pangomm-1.4"/>
+									<listOptionValue builtIn="false" value="sigc-2.0"/>
+									<listOptionValue builtIn="false" value="gsl"/>
+									<listOptionValue builtIn="false" value="gslcblas"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.161849166" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -165,18 +180,10 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<folderInfo id="cdt.managedbuild.config.gnu.exe.release.1546994179.298570960" name="/" resourcePath="src/libs/caes/deprecate">
-						<toolChain id="cdt.managedbuild.toolchain.gnu.exe.release.58546750" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.exe.release" unusedChildren="">
-							<tool id="cdt.managedbuild.tool.gnu.archiver.base.402814428" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base.2000350170"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.169474144" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1580757779"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.2056245000" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release.1207055384"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.release.119423028" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.release.1661641283"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.473088874" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.1788006817"/>
-							<tool id="cdt.managedbuild.tool.gnu.assembler.exe.release.751095523" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.release.2067776797"/>
-						</toolChain>
-					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.release.1546994179.1418406156" name="LICENSE" rcbsApplicability="disable" resourcePath="src/libs/libs_github/caes/LICENSE" toolsToInvoke=""/>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.release.1546994179.778735481" name="README.md" rcbsApplicability="disable" resourcePath="src/libs/libs_github/caes/README.md" toolsToInvoke=""/>
 					<sourceEntries>
-						<entry excluding="libs/caes/deprecate|libs/caes/AudioFile|libs/icon|libs/pcg|libs/comms|env" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry excluding="libs/libs_github/caes/README.md|libs/libs_github/caes/LICENSE|libs/caes/deprecate|libs/caes/AudioFile|libs/icon|libs/pcg|libs/comms|env" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

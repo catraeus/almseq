@@ -17,7 +17,7 @@
 #include <stdio.h>
 #include <gdkmm.h>
 #include <caes/CaesTypes.hpp>
-/* \cond HIDDEN_SYMBOLS */
+
 class CfgEnv {
   private:
     struct sWinSpec {
@@ -92,6 +92,6 @@ class CfgEnv {
 
     static CfgEnv *ce;
   };
-/* \endcond HIDDEN_SYMBOLS */
+
 #endif // __CFG_ENV_H_
 
