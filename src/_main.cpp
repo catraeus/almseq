@@ -1,6 +1,4 @@
 
-// $Id: A $
-
 //=================================================================================================
 // Original File Name : _main.cpp
 // Original Author    : catraeus
@@ -40,8 +38,9 @@ You should have received a copy of the GNU Lesser General Public License along w
 #include "Cfg/CfgStrings.hpp"
 #include "Cfg/CfgParticles.hpp"
 
-
 #include "AlsaMidi.hpp"
+
+#include "GUI/WinMain.hpp"
 
 class MainConts { // total BS to shut up the warning about setting but not using.
   public:
@@ -56,6 +55,7 @@ class MainConts { // total BS to shut up the warning about setting but not using
 //=================================================================================================
 int main(int i_argc, char *i_argv[], char *i_envp[]) {
          MainConts      m;
+         WinMain       *theWinMain;
          int            dd_argc;
          int a;
 
@@ -70,7 +70,8 @@ int main(int i_argc, char *i_argv[], char *i_envp[]) {
   dd_argc    = 1;
   auto app   =     Gtk::Application   :: create       ( dd_argc, i_argv, *(m.ss), Gio::APPLICATION_FLAGS_NONE);
   m.cp       =     CfgParticles       :: GetInstance  (                          );  // CfgParticles has GdkPixbufs in it so it has to go after app is created.
-  theMidi = new AlsaMidi;
+  theMidi    = new AlsaMidi;
+  theWinMain = new WinMain                            (                          );
 
   a = 57;
   fprintf(stdout, "Gotcha %d!\n", a); fflush(stdout);
@@ -81,12 +82,17 @@ int main(int i_argc, char *i_argv[], char *i_envp[]) {
   npfd = snd_seq_poll_descriptors_count(seq_handle, POLLIN);
   pfd = (struct pollfd *)alloca(npfd * sizeof(struct pollfd));
   snd_seq_poll_descriptors(seq_handle, pfd, npfd, POLLIN);
-  while (1) {
-    if (poll(pfd, npfd, 100000) > 0) {
-      theMidi->MidiAction(seq_handle);
-    }
-  }
+//  while (1) {
+//    if (poll(pfd, npfd, 100000) > 0) {
+//      theMidi->MidiAction(seq_handle);
+//    }
+//  }
 
+  if(!Glib::thread_supported())     Glib::thread_init(0);
+
+  int    theResult = app->run((Gtk::Window &)(*theWinMain));
+
+  delete theWinMain;
 
   delete theMidi;
   return 0;
