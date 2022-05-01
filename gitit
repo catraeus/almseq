@@ -1,20 +1,6 @@
-git add   .cproject
-git add   .gitignore
-git add   .settings/language.settings.xml
 git add   gitit
-git add   src/AlsaMidi.cpp
-git add   src/Cfg/CfgEnv.cpp
-git add   src/Cfg/CfgEnv.hpp
-git add   src/Ctl/CtlMsgDspch.hpp
-git add   src/GUI/PageAnBulk.cpp
-git add   src/GUI/PageAnBulk.hpp
-git add   src/GUI/PageAnSinus.cpp
-git add   src/GUI/PageAnSinus.hpp
-git add   src/GUI/PageFileRd.cpp
-git add   src/GUI/PageFileRd.hpp
-git add   src/GUI/PageFileWr.cpp
-git add   src/GUI/PageFileWr.hpp
+git add   src/GUI/PageMidiMsg.cpp
+git add   src/GUI/PageMidiMsg.hpp
 git add   src/GUI/WinMain.cpp
 git add   src/GUI/WinMain.hpp
-git add   src/_main.cpp
 

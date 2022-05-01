@@ -200,7 +200,7 @@ void  WinMain::BuildMain           ( void ) {
 
   theFilePageRd        = new PageFileRd  ( this );
   theFilePageWr        = new PageFileWr  ( this );
-  theAnPageBulk        = new PageAnBulk  (  );
+  theMsgPage           = new PageMidiMsg  (  );
   theAnPageSinus       = new PageAnSinus (  );
   MRU_NewFileSelect    = new CbT<WinMain>;
   MRU_StatusWork       = new CbT<WinMain>;
@@ -223,8 +223,8 @@ void  WinMain::BuildMain           ( void ) {
   ntbMain.set_border_width(10);
   ntbMain.append_page(*theFilePageRd,      "File Rd");
   ntbMain.append_page(*theFilePageWr,      "File Wr");
-  ntbMain.append_page(*theAnPageBulk,      "DC & RMS");
-  ntbMain.append_page(*theAnPageSinus,     "Sine Impairments");
+  ntbMain.append_page(*theMsgPage,         "MIDI Message");
+  ntbMain.append_page(*theAnPageSinus,     "Schematic");
   frmMain.add(ntbMain);
 
   //========================================================================
@@ -269,8 +269,8 @@ void  WinMain::Connect             ( void ) {
 
 bool  WinMain::OnNewFileSelect(void *d) {
   char tStr[32768];
-  theAnPageBulk ->SetDirty();
-  theAnPageBulk ->ClearStats();
+  theMsgPage ->SetDirty();
+  theMsgPage ->ClearStats();
   theAnPageSinus->SetDirty();
   theAnPageSinus->ClearStats();
   sprintf(tStr, "%s %d.%d build %d  --  %s", ce->appName, ce->verMaj, ce->verMin, ce->buildNo, ce->GetFileNameAbs());

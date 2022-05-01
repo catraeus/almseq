@@ -28,7 +28,7 @@
 
 #include "../Ctl/CtlMsgDspch.hpp"
 
-#include "PageAnBulk.hpp"
+#include "PageMidiMsg.hpp"
 #include "PageAnSinus.hpp"
 #include "PageFileRd.hpp"
 #include "PageFileWr.hpp"
@@ -113,7 +113,7 @@ class WinMain: public Gtk::Window {
     // The pages that we have made
     PageFileRd               *theFilePageRd;
     PageFileWr               *theFilePageWr;
-    PageAnBulk               *theAnPageBulk;
+    PageMidiMsg              *theMsgPage;
     PageAnSinus              *theAnPageSinus;
 
   private:
