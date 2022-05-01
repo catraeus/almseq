@@ -19,7 +19,7 @@
 #include <stdlib.h>
 #include "CfgVersion.hpp"
 #include "../_PrjGlbl.hpp"
-#include <caes/CaesString.hpp>
+#include <caesbase/CaesString.hpp>
 
 
 CfgEnv *CfgEnv::ce = NULL;

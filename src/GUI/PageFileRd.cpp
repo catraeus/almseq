@@ -11,7 +11,7 @@
 //
 //=================================================================================================
 
-#include <caes/CaesString.hpp>
+#include <caesbase/CaesString.hpp>
 #include "PageFileRd.hpp"
 
 
@@ -179,7 +179,7 @@ void  PageFileRd::OnFileParse            ( void ) {
   if(true) {
     ebxFact.set_text("fact");
     //==
-    sprintf(tStr, "%lld", 8);
+    sprintf(tStr, "%lld", 8LL);
     ebxFactSize.set_text(tStr);
     //==
     IntWithComma(tStr, 323432);

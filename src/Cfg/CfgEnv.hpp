@@ -1,6 +1,4 @@
 
-// $Id: CfgEnv.hpp 506 2019-12-25 15:35:12Z duncang $
-
 //=================================================================================================
 // Original File Name : Env.h
 // Original Author    : duncang
@@ -16,7 +14,8 @@
 
 #include <stdio.h>
 #include <gdkmm.h>
-#include <caes/CaesTypes.hpp>
+
+#include <caesbase/CaesTypes.hpp>
 
 class CfgEnv {
   private:

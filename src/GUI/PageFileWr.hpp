@@ -16,7 +16,7 @@
 #define __PAGE_FILE_WR_HPP_
 
 #include <gtkmm.h>
-#include <caes/CaesTypes.hpp>
+#include <caesbase/CaesTypes.hpp>
 
 #include "../Cfg/CfgEnv.hpp"
 

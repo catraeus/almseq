@@ -22,7 +22,7 @@
 #include <gtkmm/entry.h>
 #include <gtkmm/notebook.h>
 
-#include <caes/CaesString.hpp>
+#include <caesbase/CaesString.hpp>
 
 class AnBulk;
 

@@ -16,7 +16,7 @@
 
 #include "WinMain.hpp"
 #include <string.h>
-#include <caes/CaesString.hpp>
+#include <caesbase/CaesString.hpp>
 //#include <caes/CaesMath.hpp>
 //#include <caes/AudioFile/NumSys.hpp>
 
@@ -68,7 +68,6 @@ void     PageFileWr::BuildMain           ( void                  ) {
   return;
 }
 void     PageFileWr::BuildFile           ( void                  ) {
-  llong gg = 2;
   char *tStr;
 
 
@@ -91,10 +90,10 @@ void     PageFileWr::BuildFile           ( void                  ) {
                                              ebxWaveTimeDur .set_alignment(Gtk::ALIGN_END  );  ebxWaveTimeDur .set_width_chars(20);  ebxWaveTimeDur .set_editable(true );
   lblSetFmt      .set_text("Format:"     );
   cbxSetFmt = new Gtk::ComboBoxText();
-  tStr = "bla"; cbxSetFmt->append(tStr);
-  tStr = "blb"; cbxSetFmt->append(tStr);
-  tStr = "blc"; cbxSetFmt->append(tStr);
-  tStr = "bld"; cbxSetFmt->append(tStr);
+  tStr = (char *)"bla"; cbxSetFmt->append(tStr);
+  tStr = (char *)"blb"; cbxSetFmt->append(tStr);
+  tStr = (char *)"blc"; cbxSetFmt->append(tStr);
+  tStr = (char *)"bld"; cbxSetFmt->append(tStr);
   cbxSetFmt->set_active(3);
   cbxSetFmt->set_active_text("blc");
   return;
@@ -214,7 +213,6 @@ bool     PageFileWr::OnKeyCh             ( GdkEventKey    *i_d   ) {
 }
 bool     PageFileWr::OnChangeCh          ( GdkEventFocus  *i_e   ) {
   char  *cc;
-  llong  nn;
   double dd;
 
   if(holdOffAction) return true;
@@ -247,9 +245,7 @@ bool     PageFileWr::OnChangeFs          ( GdkEventFocus  *i_e   ) {
   return true;
 }
 void     PageFileWr::OnChangeFmt         ( void                  ) {
-  llong ll;
   if(holdOffAction) return;
-  ll = cbxSetFmt->get_active_row_number();
   ctMd->MRD_WaveChanged();
   return;
 }
@@ -277,7 +273,6 @@ bool     PageFileWr::OnKeyT              ( GdkEventKey    *i_d   ) {
 }
 bool     PageFileWr::OnChangeT           ( GdkEventFocus  *i_e   ) {
   char   *cc;
-  llong   ll;
   double  dd;
 
   if(holdOffAction) return true;

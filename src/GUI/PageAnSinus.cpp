@@ -14,7 +14,7 @@
 
 #include "PageAnSinus.hpp"
 #include "WinMain.hpp"
-#include <caes/CaesString.hpp>
+#include <caesbase/CaesString.hpp>
 #include <math.h>
 
         PageAnSinus::PageAnSinus        ( void ) {

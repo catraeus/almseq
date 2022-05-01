@@ -16,8 +16,8 @@
 
 #include <gtkmm.h>
 //#include <caes/AudioFile/WaveFiler.hpp>
-#include <caes/CaesTypes.hpp>
-#include <caes/CaesCallBack.hpp>
+#include <caesbase/CaesTypes.hpp>
+#include <caesbase/CaesCallBack.hpp>
 
 #include "../Cfg/CfgEnv.hpp"
 

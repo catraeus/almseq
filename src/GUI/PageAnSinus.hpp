@@ -24,8 +24,8 @@ Estimate Carrier Freq, check RMS less than some number. check tilt, check parabo
 
 #include <gtkmm.h>
 //#include <caes/AudioFile/Signal.hpp>
-#include <caes/CaesTypes.hpp>
-#include <caes/CaesCallBack.hpp>
+#include <caesbase/CaesTypes.hpp>
+#include <caesbase/CaesCallBack.hpp>
 //#include <caes/CaesStat.hpp>
 //#include "../Ana/AnSinus.hpp"
 

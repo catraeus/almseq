@@ -16,7 +16,7 @@
 
 #include <gtkmm.h>
 //#include <caes/AudioFile/Signal.hpp>
-#include <caes/CaesTypes.hpp>
+#include <caesbase/CaesTypes.hpp>
 //#include "../Ana/AnBulk.hpp"
 
 class PageAnBulk: public Gtk::Box {

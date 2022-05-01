@@ -14,7 +14,7 @@
 #include "PageAnBulk.hpp"
 #include "WinMain.hpp"
 #include <math.h>
-#include <caes/CaesString.hpp>
+#include <caesbase/CaesString.hpp>
 
         PageAnBulk::PageAnBulk         ( void        ) {
   BuildEnv();

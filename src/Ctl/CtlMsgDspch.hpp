@@ -15,8 +15,8 @@
 #ifndef __CTL_MSG_DSPCH_HPP_
 #define __CTL_MSG_DSPCH_HPP_
 
-#include <caes/CaesCallBack.hpp>
-#include <caes/CaesTypes.hpp>
+#include <caesbase/CaesCallBack.hpp>
+#include <caesbase/CaesTypes.hpp>
 
 class CtlMsgDspch {
   private:

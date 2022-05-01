@@ -87,8 +87,9 @@ int main(int i_argc, char *i_argv[], char *i_envp[]) {
 
   int    theResult = app->run((Gtk::Window &)(*theWinMain));
 
+
   delete theWinMain;
 
   delete theMidi;
-  return 0;
+  return theResult;
 }

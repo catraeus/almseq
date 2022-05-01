@@ -1,15 +1,13 @@
 
-// $Id: A $
-
 //=================================================================================================
-// Original File Name : AlsaMidi.hpp
+// Original File Name : AlsaMidi.cpp
 // Original Author    : catraeus
 // Creation Date      : Apr 17, 2022
 // Copyright          : Copyright © 2022 by Catraeus and Duncan Gray
 //
 // Description        :
 /*
-   The class wrapper of Alsa MIDI Api stuff
+   See the header file for this source file for a detailed description.
 */
 //
 //=================================================================================================
